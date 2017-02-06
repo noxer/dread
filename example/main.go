@@ -1,0 +1,19 @@
+package main
+
+import (
+	"log"
+
+	"github.com/noxer/dread"
+)
+
+func main() {
+	for i := 0; i < 10; i++ {
+		r, err := dread.ReadRune()
+		if err != nil {
+			log.Fatalf("%d: Error: %s\n", i, err)
+		}
+		log.Printf("%d: Rune: %c (%U)", i, r, r)
+	}
+
+	log.Println("Done.")
+}
