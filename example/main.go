@@ -12,7 +12,7 @@ func main() {
 		if err != nil {
 			log.Fatalf("%d: Error: %s\n", i, err)
 		}
-		log.Printf("%d: Rune: %c (%U)", i, r, r)
+		log.Printf("%d: Rune: %c (%[2]U)", i, r)
 	}
 
 	log.Println("Done.")
